@@ -1,0 +1,13 @@
+GameField:
+  width: 100
+  height: 20
+Rabbit:
+  weightAnimal: 2.0
+  maxAnimalsPerCell: 150
+  speedAnimal: 2
+  foodNeeded: 0.45
+Wolf:
+  weightAnimal: 50.0
+  maxAnimalsPerCell: 30
+  speedAnimal: 3
+  foodNeeded: 8.0
