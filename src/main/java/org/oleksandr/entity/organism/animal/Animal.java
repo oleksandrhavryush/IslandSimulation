@@ -41,6 +41,7 @@ public abstract class Animal extends Organism implements Eatable {
                 foodNeeded = (double) animalData.get("foodNeeded");
             }
         } catch (IOException e) {
+
             e.printStackTrace();
             // Обробка помилки завантаження з файлу
         }
