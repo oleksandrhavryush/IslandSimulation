@@ -17,4 +17,9 @@ public class Wolf extends Predator {
             System.out.println("I can only eat " + Herbivore.class.getSimpleName().toLowerCase() + " " + Animal.class.getSimpleName().toLowerCase() + "s");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Wolf";
+    }
 }

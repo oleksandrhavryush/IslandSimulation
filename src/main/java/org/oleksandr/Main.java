@@ -1,24 +1,35 @@
 package org.oleksandr;
 
+import org.oleksandr.controller.HerbivoreController;
 import org.oleksandr.entity.map.GameField;
 import org.oleksandr.entity.organism.animal.herbivore.Rabbit;
-import org.oleksandr.entity.organism.animal.predator.Wolf;
-import org.oleksandr.entity.organism.plant.Grass;
 
 public class Main {
     public static void main(String[] args) {
         GameField gameField = new GameField();
-        System.out.println(gameField);
-
-        Grass grass = new Grass();
         Rabbit rabbit = new Rabbit();
-        rabbit.eat(grass);
-        rabbit.printParameters();
 
-        Wolf wolf = new Wolf();
-        wolf.eat(rabbit);
-        wolf.printParameters();
+        int x = 0;
+        int y = 0;
+        String cellStatistics = gameField.getCellStatistics(x, y);
+        System.out.println("Statistics for cell at position (" + x + ", " + y + "):");
+        System.out.println(cellStatistics);
 
+        // Get overall statistics for all cells
+        String allCellStatistics = gameField.getAllCellStatistics();
+        System.out.println("Overall statistics for all cells:");
+        System.out.println(allCellStatistics);
+
+        // Викликати метод для їжі травоядних
+        HerbivoreController.letHerbivoresEat(gameField.getCells());
+
+        String cellStatisticsUpdate = gameField.getCellStatistics(x, y);
+        System.out.println("Statistics for cell at position (" + x + ", " + y + "):");
+        System.out.println(cellStatisticsUpdate);
+
+        String allCellStatisticsUpdate = gameField.getAllCellStatistics();
+        System.out.println("Overall statistics for all cells:");
+        System.out.println(allCellStatisticsUpdate);
 
     }
 }

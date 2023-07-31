@@ -1,6 +1,9 @@
 GameField:
-  width: 100
-  height: 20
+  width: 10
+  height: 10
+Grass:
+  weightPlant: 1.0
+  maxPlantsPerCell: 200
 Rabbit:
   weightAnimal: 2.0
   maxAnimalsPerCell: 150
